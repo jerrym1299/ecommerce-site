@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css"></style>
+    </head>
+
+    <body>
+
+        add user:
+        <form>
+            name: <input type="text" name="name"><br>
+            username: <input type="text" name="username"><br>
+            password: <input type="password" name="password"><br>
+            <input type="submit">submit</input>
+        </form>
+
+        view users:
+        <button onclick="displayUsers()">display</button>
+        <form>
+            <input type="submit">display</input>
+        </form>
+
+        login:
+        username: <input type="text" id="usernameLogin">
+        password: <input type="password" id="passwordLogin">
+        <button onclick="checkLogin('username', 'password')">submit button thing</button>
+
+        (for testing login)
+        <form>
+            username: <input type="text" name="username"><br>
+            password: <input type="password" name="password"><br>
+            <input type="submit">submit</input>
+        </form>
+
+    </body>
+
+</html>
