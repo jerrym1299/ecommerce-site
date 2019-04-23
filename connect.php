@@ -17,6 +17,7 @@ if (isset($_POST['username2']) && isset($_POST['password2'])) {
   $query = "SELECT * FROM Users WHERE username = '$user_name' AND password = '$user_pass'"
   if (mysql_num_rows($query) > 0) {
     echo "Login Successful"  
+    header("location:Main.html");
   }
   else {
     echo "Incorrect input or user does not exist"
