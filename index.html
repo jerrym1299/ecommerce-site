@@ -9,7 +9,7 @@
     <body>
 
         add user:
-        <form>
+        <form method="post" action="<?php echo htmlspecialcharacters($_SERVER["PHP_SELF"];?>)">
             name: <input type="text" name="name"><br>
             username: <input type="text" name="username"><br>
             password: <input type="password" name="password"><br>
@@ -28,7 +28,7 @@
         <button onclick="checkLogin('username', 'password')">submit button thing</button>
 
         (for testing login)
-        <form>
+        <form method="post" action="<?php echo htmlspecialcharacters($_SERVER["PHP_SELF"];?>
             username: <input type="text" name="username"><br>
             password: <input type="password" name="password"><br>
             <input type="submit">submit</input>
