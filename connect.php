@@ -7,4 +7,9 @@ $database = new mysqli($host', $user, $password, $dbname);
 if ($database->connect_errno) {
   echo "Failed to connect: (" . $database->connect_errno . ") " . $database->connect_error;"
 }
+else {
+  echo "connection successful";
+}
+
+if (isset($_POST['username']))
 ?>
