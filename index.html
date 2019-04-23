@@ -28,13 +28,7 @@ setcookie("test1", "This is a test cookie", time() + 600); // this goes for 10 m
         </form>
 
         <p></p>
-
-        login:
-        username: <input type="text" id="usernameLogin"><br>
-        password: <input type="password" id="passwordLogin"><br>
-        <button onclick="checkLogin('username', 'password', 'localhost:8080', 'output')">submit button thing</button>
-        <!-- note: the url, or localhost:8080, is not correct, change to the correct local host
-            and or the actual url later-->
+        
         <p id="output"> login correct? </p>
 
        (for testing login):
@@ -43,6 +37,20 @@ setcookie("test1", "This is a test cookie", time() + 600); // this goes for 10 m
             password: <input type="password" name="password"><br>
             <input type="submit">
         </form>
+        
+        <p></p>
+        
+        add amount to accounts
+        <form>
+            accountid1: <input type="text" name="id1"><br>
+            accountid2: <input type="text" name="id2"><br>
+            amount <input type="text" name="amount"><br>
+            <input type="submit">
+        </form>
+        
+        <div id="dataOutput"></div>
+        <!-- display the data for owing people here -->
+
 
     </body>
 
