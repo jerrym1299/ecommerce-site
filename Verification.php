@@ -1,5 +1,5 @@
 <?php
-include ("connection.php");
+include ("connect.php");
 if (isset($_POST['username2']) && isset($_POST['password2'])) {
   $user_name = $_POST['username2']
   $user_pass = $_POST['password2']
