@@ -11,5 +11,16 @@ else {
   echo "connection successful";
 }
 
-if (isset($_POST['username']))
+if (isset($_POST['username2']) && isset($_POST['password2'])) {
+  $user_name = $_POST['username2']
+  $user_pass = $_POST['password2']
+  $query = "SELECT * FROM Users WHERE username = '$user_name' AND password = '$user_pass'"
+  if (mysql_num_rows($query) > 0) {
+    echo "Login Successful"  
+  }
+  else {
+    echo "Incorrect input or user does not exist"
+  }
+}
+database_close()
 ?>
