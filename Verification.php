@@ -25,6 +25,7 @@ else if (isset($_POST['name']) && isset($_POST['username1']) && isset($_POST['pa
   else {
     echo "creation successful!"
     mysql_query("INSERT INTO Users(name, username, password) VALUES ('$newusername', '$newuser', '$newuserpass')");
+    header("location: Main.html?usernm=username");
   }
 }
 database_close()
