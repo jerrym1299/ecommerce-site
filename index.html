@@ -9,7 +9,7 @@
     <body>
 
         add user:
-        <form method="post" action="<?php echo htmlspecialcharacters($_SERVER["PHP_SELF"]);?>">
+        <form>
             name: <input type="text" name="name"><br>
             username: <input type="text" name="username"><br>
             password: <input type="password" name="password"><br>
@@ -25,12 +25,15 @@
         login:
         username: <input type="text" id="usernameLogin">
         password: <input type="password" id="passwordLogin">
-        <button onclick="checkLogin('username', 'password')">submit button thing</button>
+        <button onclick="checkLogin('username', 'password', 'localhost:8080', 'output')">submit button thing</button>
+        <!-- note: the url, or localhost:8080, is not correct, change to the correct local host
+            and or the actual url later-->
+        <p id="output"> login correct? </p>
 
         (for testing login)
-        <form method="post" action="<?php echo htmlspecialcharacters($_SERVER["PHP_SELF"]);?">
-            username: <input type="text" name="username"> <br>
-            password: <input type="password" name="password"> <br>
+        <form>
+            username: <input type="text" name="username"><br>
+            password: <input type="password" name="password"><br>
             <input type="submit">submit</input>
         </form>
 
