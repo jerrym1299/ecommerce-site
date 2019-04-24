@@ -10,6 +10,7 @@ if (isset($_POST['username2']) && isset($_POST['password2'])) {
   }
   else {
     echo "Incorrect input or user does not exist"
+    header("location: login.html")
   }
 }
 else if (isset($_POST['name']) && isset($_POST['username1']) && isset($_POST['password1'])) { // creation of account
@@ -20,7 +21,7 @@ else if (isset($_POST['name']) && isset($_POST['username1']) && isset($_POST['pa
   query_2 = "SELECT * FROM Users WHERE name = '$newusername' AND username = '$newuser' AND password = '$newuserpass'";
   if (myspl_num_rows(query_2) > 0) {
     echo "Username already exists!";
-    header("location: index.html");
+    header("location: signup.html");
   }
   else {
     echo "creation successful!"
