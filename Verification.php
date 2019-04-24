@@ -12,10 +12,10 @@ if (isset($_POST['username2']) && isset($_POST['password2'])) {
     echo "Incorrect input or user does not exist"
   }
 }
-else if (isset($_POST['name']) && isset($_POST['username1']) && isset($_POST['password1'])) {
-  $newusername = $_POST['name'];
-  $newuser = $_POST['username1'];
-  $newuserpass = $_POST['password1'] ;
+else if (isset($_POST['name']) && isset($_POST['username1']) && isset($_POST['password1'])) { // creation of account
+  $newusername = $_POST['name']; // name
+  $newuser = $_POST['username1']; // username
+  $newuserpass = $_POST['password1'] ; // pass
   // verifying there is no duplicates
   query_2 = "SELECT * FROM Users WHERE name = '$newusername' AND username = '$newuser' AND password = '$newuserpass'";
   if (myspl_num_rows(query_2) > 0) {
