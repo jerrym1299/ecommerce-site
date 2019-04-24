@@ -26,7 +26,7 @@ else if (isset($_POST['name']) && isset($_POST['username1']) && isset($_POST['pa
   else {
     echo "creation successful!"
     mysql_query("INSERT INTO Users(name, username, password) VALUES ('$newusername', '$newuser', '$newuserpass')");
-    header("location: Main.html"); // not sure if u can pass variabels in other scripts like that
+    header("location: Main.html"); // not sure if u can pass variables into other scripts, but we need to to display the user's username
   }
 }
 database_close()
