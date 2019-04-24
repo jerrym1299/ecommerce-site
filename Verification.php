@@ -18,7 +18,7 @@ else if (isset($_POST['name']) && isset($_POST['username1']) && isset($_POST['pa
   $newuserpass = $_POST['password1'] ;
   // verifying there is no duplicates
   query_2 = "SELECT * FROM Users WHERE name = '$newusername' AND username = '$newuser' AND password = '$newuserpass'";
-  if (myspl_num+rows(query_2) > 0) {
+  if (myspl_num_rows(query_2) > 0) {
     echo "Username already exists!";
     header("location: index.html");
   }
